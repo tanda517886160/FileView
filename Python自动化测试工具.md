@@ -79,9 +79,9 @@ element = browser.find_element_by_class_name()
 element = browser.find_element_by_css_selector("p.content")
 ```
 
-> [W3C XPath Recommendation](https://www.w3.org/TR/xpath/)
-> [XPath Tutorial](http://www.zvon.org/comp/r/tut-XPath_1.html/)- with interactive examples.
-> [XPath Helper](https://chrome.google.com/webstore/detail/xpath-helper/hgimnogjllphhhkhlmebbmlgjoejdpjl)- for Google Chrome
+> [W3C XPath Recommendation](https://www.w3.org/TR/xpath/) 
+> [XPath Tutorial](http://www.zvon.org/comp/r/tut-XPath_1.html/)- with interactive examples. 
+> [XPath Helper](https://chrome.google.com/webstore/detail/xpath-helper/hgimnogjllphhhkhlmebbmlgjoejdpjl)- for Google Chrome 
 > [CSS选择器介绍](http://saucelabs.com/resources/articles/selenium-tips-css-selectors)
 
 查找多个，数组形式:
