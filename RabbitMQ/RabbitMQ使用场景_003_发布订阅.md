@@ -7,7 +7,7 @@
 ![img](https://tanda517886160.github.io/resources/images/rabbitmq/5-1.png)
 
 可用的交换类型: "direct", "topic","headers"和"fanout"
-fanout exchange非常简单。fanout即广播模式,广播所有的消息到它知道所有队列。
+fanout exchange非常简单。您可能会猜测的名字,fanout就是广播模式,广播所有的消息到它知道所有队列。
 
 
 ### 临时队列
@@ -28,7 +28,7 @@ fanout exchange非常简单。fanout即广播模式,广播所有的消息到它�
 
 ```php
 <?php
-require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/config.php';
 
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
@@ -55,7 +55,7 @@ if(empty($data)) $data = "Hello World!";
 $msg = new AMQPMessage($data);
 
 //发布消息，
-$channel->basic_publish($msg, 'logs');
+$channel->basic_publish($msg, $exchange);
 echo " [x] Sent ", $data, "\n";
 
 // 最后关闭通道和连接
@@ -67,7 +67,7 @@ $connection->close();
 #### 1. 订阅者 subscriber.php
 
 ```php
-require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/config.php';
 
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
