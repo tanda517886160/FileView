@@ -7,7 +7,7 @@
 ![img](https://tanda517886160.github.io/resources/images/rabbitmq/5-1.png)
 
 可用的交换类型: "direct", "topic","headers"和"fanout"
-fanout exchange非常简单。您可能会猜测的名字,fanout就是广播模式,广播所有的消息到它知道所有队列。
+fanout exchange非常简单。fanout即广播模式,广播所有的消息到它知道所有队列。
 
 
 ### 临时队列
