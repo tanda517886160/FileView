@@ -23,7 +23,7 @@
 
 #### 1. 任务队列 tasker.php
 ```php
-require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/config.php';
 
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
@@ -62,7 +62,7 @@ $connection->close();
 ![img](https://tanda517886160.github.io/resources/images/rabbitmq/4-2.png)
 
 ```php
-require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/config.php';
 
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
