@@ -19,9 +19,9 @@ binding_key必须在相同的形式。topic exchange背后的逻辑是类似于�
 
 #### 我们创建了2个队列3个绑定: 
 > 1. Q1 binding_key = "*.orange.*"
-> - 队列Q1绑定了(橙色)
+> - 队列Q1绑定了(orange)
 > 2. Q2 binding_key = "*.*.rabbit" and ,
-> - 队列Q2绑定了(兔子)和(懒惰)
+> - 队列Q2绑定了(rabbit)和(lazy)
 
 
 ####  绑定可以概括
@@ -31,7 +31,7 @@ binding_key必须在相同的形式。topic exchange背后的逻辑是类似于�
 > 4. 消息"lazy.brown.fox"会被放到Q2队列
 > 5. 消息"lazy.pink.rabbit"虽然匹配了2个绑定,但是2个绑定都在Q2队列,只会放一次到Q2队列
 > 6. 消息"quick.brown.fox" 不匹配任何绑定会被丢弃
-> 7. 如果我们打破我们的约定,发送一条消息,该消息带有一个或四个单词,如"orange"或"quick.orange.male.rabbit"? 这些消息不会匹配任何绑定会被丢弃。
+> 7. 如果打破规则,发送一条消息,该消息带有一个或四个单词,如"orange"或"quick.orange.male.rabbit"? 这些消息不会匹配任何绑定会被丢弃。
 > 8. 消息"lazy.orange.male.rabbit" 尽管它有四个单词,它能匹配最后一个绑定("lazy.#").它会被放到Q2队列
 
 #### Topic exchange 特点
